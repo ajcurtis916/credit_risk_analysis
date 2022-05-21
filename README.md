@@ -12,67 +12,31 @@ To continue to strengthen our predictive model, we utilized two ensemble algorit
 
 ## Results
 
-**RandomOverSampler**
+| **RandomOverSampler**  | **SMOTE Oversampler** | **ClusterCentroids Undersampler** | **Combined SMOTEENN** | **BalancedRandom ForestClassifier** | **EasyEnsemble Classifier** |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Accuracy Score: 0.67  | Accuracy Score: .64  |  Accuracy Score: 0.55 |  Accuracy Score: 0.63  |  Accuracy Score: 0.80  |  Accuracy Score: 0.93  |
+| Precision (High-Risk): 0.09  | Precision (High-Risk): 0.01  | Precision (High-Risk): 0.01  | Precision (High-Risk): 0.01  |  Precision (High-Risk): 0.03  |  Precision (High-Risk: 0.03)  |
+| Precision (Low-Risk): 1.0 | Precision (Low-Risk): 1.0  | Precision (Low-Risk): 1.0  | Precision (Low-Risk): 1.0 |  Precision (Low-Risk): 1.0  |  Precision (Low-Risk): 1.0  |
+| Recall (High-Risk): 0.92 | Recall (High-Risk): 0.61  | Recall (High-Risk): 0.67  | Recall (High-Risk): 0.69  |  Recall (High-Risk): 0.71  |  Recall (High-Risk): 0.71  |
+| Recall (Low-Risk): 0.95 | Recall (Low-Risk): 0.67  | Recall (Low-Risk): 0.42  | Recall (Low-Risk): 0.57  |  Recall (Low-Risk): 0.88  |  Recall (Low-Risk): 0.88  |
 
-  - Accuracy Score: 0.67
-  - Precision
-    - High-Risk: 0.09
-    - Low-Risk: 1.0
-  - Recall
-    - High-Risk: 0.92
-    - Low-Risk: 0.95
-  
-**SMOTE**
+*Confusion matrices and full classification reports can be found in the notebooks for this project*
+</br>
+</br>
 
-  - Accuracy Score: .64
-  - Precision
-    - High-Risk: 0.01
-    - Low-Risk: 1.0
-  - Recall
-    - High-Risk: 0.61
-    - Low-Risk: 0.67
+**Accuracy score**: faction of correct predictions (TP+TN)/ (TP+FN+TN+FP)
 
-**ClusterCentroids**
-  
-  - Accuracy Score: 0.55
-  - Precision
-    - High-Risk: 0.01
-    - Low-Risk: 1.0
-  - Recall
-    - High-Risk: 0.67
-    - Low-Risk: 0.42
-  
-**SMOTEENN**
-  
-  - Accuracy Score: 0.63
-  - Precision
-    - High-Risk: 0.01
-    - Low-Risk: 1.0
-  - Recall
-    - High-Risk: 0.69
-    - Low-Risk: 0.57
-  
-**BalancedRandomForestClassifier**
+**Precision (Positive Predictive Value)**: how reliable is a positive classification (TP/TP+FP)
 
-  - Accuracy Score: 0.80
-  - Precision
-    - High-Risk: 0.03
-    - Low-Risk: 1.0
-  - Recall
-    - High-Risk: 0.71
-    - Low-Risk: 0.88
+**Recall (Sensitivity)**: ability of the classifier to find all positives of samples (TP/TP+FN)
+
+
  
- **EasyEnsembleClassifier**
  
-  - Accuracy Score: 0.93
-  - Precision
-    - High-Risk: 0.03
-    - Low-Risk: 1.0
-  - Recall
-    - High-Risk: 0.71
-    - Low-Risk: 0.88
 </br>
 
 ## Summary
+
+When tasked with a building and optimizing a supervised machine learning model, the target of interest and accurancy of model must be considered before determining the most appropriate model.  Different techniques should be employeed to work towards the best model for the given data and features.  However, accuracy is not the only metric to consider when determining the best fit model.  Depending on the problem that needs to be solved, precision may be more important than recall, or vice versa, or one of the target outcomes' precision and/or recall may be more inmportant than another.   
 
 Summarize results above, recommend which model to use, or there is no recommendation with a justification.  Include bit about feature importance.  
